@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body class="container" ng-app="app" ng-controller="mainCtrl">
+	<header class="text-center">
+	<h1>Animating angular apps <small>ngHide and ngShow</small></h1>
+		<a class="btn btn-primary" href="#" ng-click="lions = !lions" ng-class="{active: lions}">Toggle Lions</a>
+		<a class="btn btn-success" href="#" ng-click="cranes = !cranes" ng-class="{active: cranes}">Toggle Cranes</a>
+	</header>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="jumbotron" ng-show="lions">
+			        <img style="width: 300px; height: 250px;" src="images/profile.jpg" class="img-responsive img-thumbnail">
+			</div>
+		</div>
+		<div class="col-xs-6">
+    	<!-- show and hide the crane picture -->
+	      	<div class="jumbotron" ng-show="cranes">
+	        	<img style="width: 300px; height: 250px;" src="images/profile.jpg" class="img-responsive img-thumbnail">
+	      	</div>
+     	</div>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
